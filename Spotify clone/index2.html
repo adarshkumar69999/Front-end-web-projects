@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="style2.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+</head>
+<body>
+  <header class="spotify-header">
+    <div class="left-section">
+      <img src="Spotifylogo.jpeg" alt="Spotify Logo" class="spotify-icon">
+      <div class="home-icon"><img src="Spotifyhomebutton.jpeg"/></div>
+      <div class="search-bar">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" id="searchInput" placeholder="What do you want to play?">
+      </div>
+    </div>
+    <div class="right-section">
+      <a href="#">Premium</a>
+      <a href="#">Support</a>
+      <a href="#">Download</a>
+      <span> | </span>
+      <a href="#">Install App</a>
+      <a href="#">Sign up</a>
+      <button class="login-btn">Log in</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="left-main">
+      <h3 class="library-title">Your Library</h3>
+      <button class="add-library-btn">+</button>
+
+      <div class="library-card">
+        <p class="card-title">Create your first playlist</p>
+        <p class="card-desc">It's easy, we'll help you</p>
+        <button class="create-playlist-btn">Create playlist</button>
+      </div>
+
+      <div class="library-footer-links">
+        <a href="#">Legal</a>
+        <a href="#">Privacy Center</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Cookies</a>
+        <a href="#">About Ads</a>
+        <a href="#">Accessibility</a>
+      </div>
+
+      <div class="language-select">
+        <button class="language-btn">🌐 English</button>
+      </div>
+    </section>
+
+    <section class="right-main">
+      <h2>Recommended Albums</h2>
+      <div class="albums" id="albums"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="spotify-bottom-banner">
+      <div class="banner-text">
+        <p class="title">Preview of Spotify</p>
+        <p class="desc">Sign up to get unlimited songs and podcasts with occasional ads.</p>
+      </div>
+      <button class="signup-button">Sign up free</button>
+    </div>
+
+    <div class="music-player" id="musicPlayer">
+      <div class="player-info">
+        <img id="playerCover" src="" alt="Cover" />
+        <div>
+          <p id="playerTitle">Title</p>
+          <p id="playerArtist">Artist</p>
+        </div>
+      </div>
+      <div class="player-controls">
+        <span class="material-symbols-outlined" id="playPauseBtn" onclick="togglePlay()">play_arrow</span>
+        <span class="material-symbols-outlined" onclick="stopSong()">stop</span>
+      </div>
+    </div>
+    <audio id="audioPlayer"></audio>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
